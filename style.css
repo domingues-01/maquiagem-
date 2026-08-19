@@ -1,0 +1,334 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pink-light: #fdf0f4;
+    --pink-card: #f8e2eb;
+    --black: #1a1a1a;
+    --gold: #d4af37;
+    --gold-hover: #b89628;
+    --white: #ffffff;
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--pink-light);
+    color: var(--black);
+    line-height: 1.6;
+}
+
+/* NAVEGAÇÃO */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: var(--black);
+    color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--gold);
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+    color: var(--gold);
+}
+
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://vintagefashion.com.br/wp-content/uploads/2020/12/close-up-collection-of-make-up-and-beauty-products-scaled.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    padding: 0 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.tag-gold {
+    color: var(--gold);
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-family: var(--font-heading);
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #e0e0e0;
+}
+
+/* BOTÕES */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-gold {
+    background-color: var(--gold);
+    color: var(--black);
+    border: 1px solid var(--gold);
+}
+
+.btn-gold:hover {
+    background-color: var(--gold-hover);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--white);
+    border: 1px solid var(--white);
+    margin-left: 10px;
+}
+
+.btn-outline:hover {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+/* SEÇÕES */
+.section {
+    padding: 80px 8%;
+}
+
+.bg-light {
+    background-color: #f7e8ee;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.sub-title {
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.section-title h2 {
+    font-family: var(--font-heading);
+    font-size: 36px;
+    color: var(--black);
+}
+
+.gold-line {
+    width: 60px;
+    height: 2px;
+    background-color: var(--gold);
+    margin: 10px auto 0;
+}
+
+/* LAYOUT GRID 2 COLUNAS */
+.grid-2-columns {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.grid-2-columns.reverse {
+    flex-direction: row-reverse;
+}
+
+.image-container, .text-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+.card-gold-border img {
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid var(--gold);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    display: block;
+}
+
+/* CARDS DE PASSO A PASSO SKINCARE */
+.step-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 20px;
+    background-color: var(--white);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.step-number {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--gold);
+}
+
+/* LISTA DE PRODUTOS */
+.product-step {
+    background-color: var(--white);
+    padding: 15px;
+    border-left: 4px solid var(--black);
+    margin-bottom: 15px;
+    border-radius: 0 8px 8px 0;
+}
+
+.product-step h4 {
+    color: var(--black);
+    margin-bottom: 5px;
+}
+
+.product-step h4 span {
+    color: var(--gold);
+    font-weight: bold;
+}
+
+.product-step .tip {
+    font-size: 13px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* QUIZ INTERATIVO */
+.quiz-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--gold);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.quiz-step {
+    display: none;
+}
+
+.quiz-step.active {
+    display: block;
+}
+
+.quiz-option {
+    display: block;
+    background-color: var(--pink-light);
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.quiz-option:hover {
+    background-color: var(--pink-card);
+}
+
+.result-box {
+    background-color: var(--pink-light);
+    padding: 20px;
+    border-radius: 6px;
+}
+
+/* PROVADOR VIRTUAL */
+.provador-container {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--gold);
+}
+
+.lip-display {
+    font-size: 80px;
+    margin: 20px 0;
+}
+
+.color-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+    outline: 1px solid var(--gold);
+    cursor: pointer;
+    margin: 0 5px;
+    transition: transform 0.2s;
+}
+
+.color-btn:hover {
+    transform: scale(1.15);
+}
+
+.color-name {
+    margin-top: 15px;
+    font-weight: 600;
+    color: var(--black);
+}
+
+/* RODAPÉ */
+footer {
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+}
+
+footer .copyright {
+    color: var(--gold);
+    font-size: 12px;
+    margin-top: 10px;
+}
